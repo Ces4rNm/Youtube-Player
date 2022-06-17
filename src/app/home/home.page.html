@@ -1,16 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Youtube-Player
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="play()" *ngIf="stopped" color="primary" fill="solid">Play</ion-button>
-      <ion-button (click)="stop()" *ngIf="!stopped" color="primary" fill="solid">Stop</ion-button>
-      <ion-button (click)="middle()" color="secondary" fill="solid">Middle</ion-button>
-    </ion-buttons>
+    <ion-title>Try different players:</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div id="youTube-player" style="width: 100%"></div>
+  <ion-list>
+    <ion-item [routerLink]="['/youtube-player']" detail>
+      <ion-label>youtube-player</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/plyr']" detail>
+      <ion-label>plyr</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/youtube-player']" detail>
+      <ion-label>The Legend of Zelda</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/youtube-player']" detail>
+      <ion-label>Pac-Man</ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/youtube-player']" detail>
+      <ion-label>Super Mario World</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

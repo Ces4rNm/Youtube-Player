@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'plyr',
+    loadChildren: () => import('./plyr/plyr.module').then( m => m.PlyrPageModule)
+  },
+  {
+    path: 'youtube-player',
+    loadChildren: () => import('./youtube-player/youtube-player.module').then( m => m.YoutubePlayerPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Youtube-Player
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="play()" *ngIf="stopped" color="primary" fill="solid">Play</ion-button>
+      <ion-button (click)="stop()" *ngIf="!stopped" color="primary" fill="solid">Stop</ion-button>
+      <ion-button (click)="middle()" color="secondary" fill="solid">Middle</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="youTube-player" style="width: 100%"></div>
+</ion-content>
