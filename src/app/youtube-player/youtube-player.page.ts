@@ -19,7 +19,7 @@ export class YoutubePlayerPage implements AfterViewInit {
 
   ngAfterViewInit() {
     if (this.player == undefined) {
-      this.player = YouTubePlayer('youTube-player', { playerVars: { cc_load_policy: 1, autoplay: 1, controls: 1, enablejsapi: 1, iv_load_policy: 3, modestbranding: 1, showinfo: 0, rel: 0, autohide: 0, fs: 1, disablekb: 0, playsinline: 1 }});
+      this.player = YouTubePlayer('youTube-player', { playerVars: { cc_load_policy: 1, autoplay: 1, controls: 1, enablejsapi: 1, iv_load_policy: 3, modestbranding: 1, rel: 0, fs: 1, disablekb: 0, playsinline: 1 }});
       this.play();
     }
   }

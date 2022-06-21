@@ -4,6 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content fullscreen hide-nav-bar="true">
+  <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+  <ion-toolbar class="ion-margin-top">
+    <ion-buttons class="ion-justify-content-around" style="display: flex;">
+      <ion-button (click)="play()">
+        <ion-icon slot="icon-only" name="play"></ion-icon>
+      </ion-button>
+      <ion-button (click)="pause()">
+        <ion-icon slot="icon-only" name="pause"></ion-icon>
+      </ion-button>
+      <ion-button (click)="stop()">
+        <ion-icon slot="icon-only" name="stop"></ion-icon>
+      </ion-button>
+      <ion-button (click)="flag()">
+        <ion-icon slot="icon-only" name="flag"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-content>
